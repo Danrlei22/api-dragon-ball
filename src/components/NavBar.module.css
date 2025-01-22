@@ -1,0 +1,53 @@
+nav{
+    background-color: rgb(255, 140, 0);
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative
+}
+
+.left{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo{
+    width: 250px;
+    height: auto;
+}
+
+.right{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.iconButton{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    
+}
+
+.icon{
+    width: 25px;
+    height: 25px;
+    background-color: #000;
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #FFF;
+    padding: 5px;
+}
+
+.containerIcon{
+    display: flex;
+    align-items: center;
+}
