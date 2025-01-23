@@ -1,0 +1,21 @@
+.containerSides{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0;
+}
+
+.image{
+    max-width: 45%;
+    transition: opacity 1s ease-in-out;
+}
+
+img{
+    width: auto;
+    height: 400px;
+    padding: 5px;
+}
+
+.hidden{
+    opacity: 0;
+}
