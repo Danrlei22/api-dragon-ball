@@ -1,52 +1,69 @@
-nav{
-    background-color: rgb(255, 140, 0);
-    width: 100%;
-    height: 40px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    position: relative
+nav {
+  background-color: rgb(255, 140, 0);
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-.left{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+.btnBack {
+  position: absolute;
+  left: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo{
-    width: 150px;
-    height: auto;
+.iconBack {
+  width: 25px;
+  height: 25px;
+  color: #fade03;
 }
 
-.right{
-    margin-left: auto;
-    display: flex;
-    align-items: center;
+.left {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.iconButton{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;   
+.logo {
+  width: 150px;
+  height: auto;
 }
 
-.icon{
-    width: 20px;
-    height: 20px;
-    background-color: #000;
-    display: flex;
-    margin-right: 20px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    color: #fade03;
-    padding: 5px;
+.right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 
-.containerIcon{
-    display: flex;
-    align-items: center;
+.iconButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fade03;
+  padding: 5px;
+}
+
+.containerIcon {
+  display: flex;
+  align-items: center;
 }

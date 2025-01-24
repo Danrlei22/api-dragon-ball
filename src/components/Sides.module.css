@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin:0;
+    margin: 0;
 }
 
 .image{
@@ -12,7 +12,8 @@
 
 img{
     width: auto;
-    height: 400px;
+    height: auto;
+    max-height: 400px;
     padding: 5px;
 }
 

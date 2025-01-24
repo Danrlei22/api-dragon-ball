@@ -1,17 +1,24 @@
-import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-import NavBar  from './components/NavBar';
-import Sides from './components/sides';
-import fundoDia from './assets/fundoDia.jpg';
-import fundoNoite from './assets/fundoNoite.jpg';
-import Footer from './components/Footer';
+import AllCharacters from "./pages/AllCharacters";
+import Home from "./pages/Home";
+import Planets from "./pages/Planets";
+import About from "./pages/About";
+import Transformations from "./pages/Transformations";
+
+import NavBar from "./components/NavBar";
+import fundoDia from "./assets/fundoDia.jpg";
+import fundoNoite from "./assets/fundoNoite.jpg";
 
 function App() {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
-    document.body.style.backgroundImage = theme === "light" ? `url(${fundoDia})` : `url(${fundoNoite})`;
-
+    document.body.style.backgroundImage =
+      theme === "light" ? `url(${fundoDia})` : `url(${fundoNoite})`;
+    document.body.style.backgroundColor =
+      theme === "light" ? "#b5c7e1" : "#173e4d";
     document.body.style.transition = "background-image 2s linear";
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
@@ -23,12 +30,17 @@ function App() {
   };
 
   return (
-    <>
-      <NavBar toggleTheme={toggleTheme} theme={theme}/>
-      <Sides theme={theme}/>
-      <Footer />
-    </>
-  )
+    <Router>
+      <NavBar toggleTheme={toggleTheme} theme={theme} />
+      <Routes>
+        <Route exact path="/" element={<Home theme={theme} />} />
+        <Route path="/allcharacters" element={<AllCharacters />} />
+        <Route path="/transformations" element={<Transformations />} />
+        <Route path="/planets" element={<Planets />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
