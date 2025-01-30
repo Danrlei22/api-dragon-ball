@@ -6,7 +6,7 @@ function Planets() {
   const [planets, setPlanets] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const totalPages = 10;
+  const totalPages = 6;
 
   useEffect(() => {
     const fetchCharacters = async (page) => {

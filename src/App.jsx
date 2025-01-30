@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import AllCharacters from "./pages/AllCharacters";
+import Characters from "./pages/Characters";
 import Home from "./pages/Home";
 import Planets from "./pages/Planets";
 import About from "./pages/About";
@@ -34,7 +34,8 @@ function App() {
       <NavBar toggleTheme={toggleTheme} theme={theme} />
       <Routes>
         <Route exact path="/" element={<Home theme={theme} />} />
-        <Route path="/allcharacters" element={<AllCharacters />} />
+        <Route path="/home" element={<Home theme={theme} />} />
+        <Route path="/characters" element={<Characters />} />
         <Route path="/transformations" element={<Transformations />} />
         <Route path="/planets" element={<Planets />} />
         <Route path="/about" element={<About />} />

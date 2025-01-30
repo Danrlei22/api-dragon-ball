@@ -22,7 +22,7 @@ function Menu() {
       <div className={styles.menuOptions}>
         <ul>
           <li>
-            <Link to="/allcharacters">Todos personagens</Link>
+            <Link to="/characters">Todos personagens</Link>
           </li>
           <li>
             <Link to="/transformations">Transformações</Link>

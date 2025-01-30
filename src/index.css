@@ -8,5 +8,6 @@
 body{
   color: #FFF;
   overflow: auto;
+  min-width: 220;
 }
 
