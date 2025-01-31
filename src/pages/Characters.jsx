@@ -5,7 +5,6 @@ function Characters() {
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const totalPages = 6;
 
   useEffect(() => {
     const fetchCharacters = async (page) => {
@@ -20,6 +19,7 @@ function Characters() {
 
     const fetchAllCharacters = async () => {
       const allCharacters = [];
+      const totalPages = 6;
 
       for (let page = 1; page <= totalPages; page++) {
         const data = await fetchCharacters(page);
