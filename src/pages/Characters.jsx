@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import styles from "./Characters.module.css";
+import { useLocation } from "react-router-dom";
 
 function Characters() {
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [filteredCharacters, setFilteredCharacters] = useState([]);
+  const location = useLocation();
+  const [notFoundMessage, setNotFoundMessage] = useState('');
 
   useEffect(() => {
     const fetchCharacters = async (page) => {
@@ -37,6 +41,31 @@ function Characters() {
     });
   }, []);
 
+
+  useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    const searchForm = queryParams.get("search");
+
+    if (searchForm) {
+      const filtered = characters.filter(
+        (character) =>
+          character.name.toLowerCase().includes(searchForm.toLowerCase()) ||
+          String(character.id) === searchForm
+      );
+      setFilteredCharacters(filtered);
+
+      if(filtered.length === 0){
+        setNotFoundMessage('Personagem não encontrado.');
+      }else{
+        setNotFoundMessage('');
+      }
+    }else{
+      setFilteredCharacters(characters);
+      setNotFoundMessage('')
+    }
+  }, [location.search, characters]);
+
+
   if (loading) {
     return <p>Carregando personagens...</p>;
   }
@@ -48,8 +77,11 @@ function Characters() {
   return (
     <div className={styles.containerCharacters}>
       <h1 className={styles.h1Character}>Characters</h1>
+
+      {notFoundMessage && <p className={styles.errorMessage}>{notFoundMessage}</p>}
+
       <div className={styles.characterCard}>
-        {characters.map(
+        {filteredCharacters.map(
           (character) =>
             character && (
               <div key={character.id} className={styles.character}>
