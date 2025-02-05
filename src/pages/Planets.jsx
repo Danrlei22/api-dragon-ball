@@ -1,16 +1,14 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "./planets.module.css";
-import { useState } from "react";
 
 function Planets() {
   const [planets, setPlanets] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const totalPages = 6;
 
   useEffect(() => {
-    const fetchCharacters = async (page) => {
-      const apiUrl = `https://dragonball-api.com/api/characters?page=${page}&limit=10`;
+    const fetchPlanets = async (page) => {
+      const apiUrl = `https://dragonball-api.com/api/planets?page=${page}&limit=10`;
       const response = await fetch(apiUrl);
 
       if (!response.ok) {
@@ -20,32 +18,18 @@ function Planets() {
     };
 
     const fetchAllPlanets = async () => {
-      const uniquePlanets = [];
+      const allPlanets = [];
+      const totalPages = 2;
 
       for (let page = 1; page <= totalPages; page++) {
-        const data = await fetchCharacters(page);
-
-        const characterPromises = data.items.map(async (character) => {
-          const characterResponse = await fetch(
-            `https://dragonball-api.com/api/characters/${character.id}`
-          );
-          const characterData = await characterResponse.json();
-          const planet = characterData.originPlanet;
-
-          if (planet) {
-            console.log(`${character.id} - ${character.name} Planeta encontrado: ${planet.name}`);
-            if (!uniquePlanets.some((p) => p.id === planet.id)) {
-              uniquePlanets.push(planet);
-            } 
-          }
-        });
-
-        await Promise.all(characterPromises);
+        const data = await fetchPlanets(page);
+        allPlanets.push(...data.items);
       }
 
-      setPlanets(uniquePlanets);
+      setPlanets(allPlanets);
       setLoading(false);
     };
+
     fetchAllPlanets().catch((error) => {
       setError(error.message);
       setLoading(false);
