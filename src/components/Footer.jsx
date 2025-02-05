@@ -6,7 +6,7 @@ function Footer() {
     <footer>
       <p className={styles.information}>
         <strong className={styles.info}>PERSONAGENS: 58 </strong>
-        <strong className={styles.info}>TRANSFORMAÇÕES: 49</strong>
+        <strong className={styles.info}>TRANSFORMAÇÕES: 43</strong>
         <strong className={styles.info}>PLANETAS: 20</strong>
       </p>
       <hr />

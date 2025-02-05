@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./Characters.module.css";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Characters() {
   const [characters, setCharacters] = useState([]);
@@ -84,7 +84,7 @@ function Characters() {
         {filteredCharacters.map(
           (character) =>
             character && (
-              <div key={character.id} className={styles.character}>
+              <Link to={`/characters/${character.id}`} key={character.id} className={styles.character}>
                 <div className={styles.characterImage}>
                   <img src={character.image} alt={character.name} />
                 </div>
@@ -104,7 +104,7 @@ function Characters() {
                     {character.affiliation}
                   </div>
                 </div>
-              </div>
+              </Link>
             )
         )}
       </div>

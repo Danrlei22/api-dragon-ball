@@ -65,7 +65,7 @@ function Planets() {
       <h1 className={styles.h1Planet}>Planetas</h1>
       {planets.map((planet) => (
         <div key={planet.id} className={styles.planet}>
-          <h2>Planeta - {planet.name}</h2>
+          <h2>{planet.name}</h2>
           <p>
             <strong className={styles.infoPlanet}>Destruído:</strong>
             {planet.isDestroyed ? "Sim" : "Não"}

@@ -1,6 +1,6 @@
 .containerPlanets {
   display: flex;
-  flex-wrap:wrap;
+  flex-direction: column;
   justify-content: center;
   margin-top: 20px;
   border: solid 1px cyan;
@@ -10,31 +10,31 @@
   color: #000;
 }
 
-.h1Planet{
-    text-align: center;
-    font-size: 2em;
-    margin: 10px;
+.h1Planet {
+  text-align: center;
+  font-size: 2em;
+  margin: 10px;
 }
 
-.infoPlanet{
-    color: #000;
-    font-size: 1.1em;
+.infoPlanet {
+  color: #000;
+  font-size: 1.1em;
 }
 
-.planet{
-    text-align: center;
-    padding: 10px;
-    margin: 0 auto;
+.planet {
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
 }
 
-.imgPlanet{
-    width: 300px;
-    height: 250px;
-    border-radius: 15px;
+.imgPlanet {
+  width: 300px;
+  height: 250px;
+  border-radius: 15px;
 }
 
-hr{
-    border: 1px solid #000;
-    width: 93%;
-    margin: 10px 1em;
+hr {
+  border: 1px solid #000;
+  width: 93%;
+  margin: 10px 1em;
 }

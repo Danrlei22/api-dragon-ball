@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Planets from "./pages/Planets";
 import About from "./pages/About";
 import Transformations from "./pages/Transformations";
+import CharacterDetail from "./pages/CharacterDetail";
 
 import NavBar from "./components/NavBar";
 import fundoDia from "./assets/fundoDia.jpg";
@@ -36,6 +37,7 @@ function App() {
         <Route exact path="/" element={<Home theme={theme} />} />
         <Route path="/home" element={<Home theme={theme} />} />
         <Route path="/characters" element={<Characters />} />
+        <Route path="/characters/:id" element={<CharacterDetail />} />
         <Route path="/transformations" element={<Transformations />} />
         <Route path="/planets" element={<Planets />} />
         <Route path="/about" element={<About />} />

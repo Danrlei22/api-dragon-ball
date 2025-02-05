@@ -1,0 +1,32 @@
+.CharacterDetail {
+  text-align: center;
+  margin: 1em 10%;
+  border: solid 1px cyan;
+  background-color: rgba(29, 23, 207, 0.8);
+}
+
+.characterDetailH1 {
+  font-size: 30px;
+  margin: 15px;
+}
+
+.characterImage {
+  background-image: url("https://web.dragonball-api.com/images-compress/89980.webp");
+  background-size: cover;
+  background-position: center center;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 280px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.characterImage img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.CharacterDescription {
+    font-size: 16px;
+    margin: 10px 10px;
+}
