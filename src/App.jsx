@@ -21,8 +21,8 @@ function App() {
     document.body.style.backgroundColor =
       theme === "light" ? "#b5c7e1" : "#173e4d";
     document.body.style.transition = "background-image 2s linear";
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundSize = "100% auto";
+    document.body.style.backgroundPosition = "center top";
     document.body.style.backgroundRepeat = "repeat";
   }, [theme]);
 

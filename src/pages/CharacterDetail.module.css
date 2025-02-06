@@ -27,6 +27,14 @@
 }
 
 .CharacterDescription {
-    font-size: 16px;
-    margin: 10px 10px;
+    font-size: 17px;
+    margin: 5px 20px;
+}
+
+.CharacterDetailH3{
+  margin: 20px 0 5px 0;
+}
+
+.CharacterDetailPlanet{
+  font-size: 18px;
 }

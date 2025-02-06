@@ -6,7 +6,7 @@ function CharacterDetail() {
   const { id } = useParams();
   const [character, setCharacter] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const fetchCharacter = async () => {
@@ -24,28 +24,31 @@ function CharacterDetail() {
     };
 
     fetchCharacter().catch((error) => {
-        setError(error.message);
-        setLoading(false);
-    })
+      setError(error.message);
+      setLoading(false);
+    });
   }, [id]);
 
-  if(loading){
-    return <p>Carregando detalhes do personagem...</p>
+  if (loading) {
+    return <p>Carregando detalhes do personagem...</p>;
   }
 
-  if(error){
-    return <p>Erro ao carregar personagem: {error}</p>
+  if (error) {
+    return <p>Erro ao carregar personagem: {error}</p>;
   }
 
   return (
     <div className={styles.CharacterDetail}>
       <h1 className={styles.characterDetailH1}>{character.name}</h1>
       <div className={styles.characterImage}>
-        <img src={character.image} alt={character.name}/>
+        <img src={character.image} alt={character.name} />
       </div>
-    <p className={styles.CharacterDescription}>
-        {character.description}
-    </p>
+      <h3 className={styles.CharacterDetailH3}>Planeta de origem</h3>
+      <div className={styles.CharacterDetailPlanet}>
+        {character.originPlanet ? character.originPlanet.name : "Desconhecido"}
+      </div>
+      <h3 className={styles.CharacterDetailH3}>Descrição do personagem</h3>
+      <p className={styles.CharacterDescription}>{character.description}</p>
     </div>
   );
 }
