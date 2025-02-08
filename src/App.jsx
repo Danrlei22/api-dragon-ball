@@ -24,6 +24,7 @@ function App() {
     document.body.style.backgroundSize = "100% auto";
     document.body.style.backgroundPosition = "center top";
     document.body.style.backgroundRepeat = "repeat";
+    document.body.style.minWidth = "340px"
   }, [theme]);
 
   const toggleTheme = () => {

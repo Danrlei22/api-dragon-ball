@@ -5,9 +5,9 @@
   box-sizing: border-box;
 }
 
-body{
+body,html{
   color: #FFF;
-  overflow: auto;
-  min-width: 220;
+  min-width: 340px;
+  min-height: 430px;
 }
 

@@ -17,7 +17,7 @@ function Menu() {
 
   return (
     <div className={styles.containerMenu}>
-      <h1>API Dragon Ball</h1>
+      <h1 className={styles.menuH1}>API Dragon Ball</h1>
 
       <form id="searchForm" onSubmit={handleSearch}>
         <label>
