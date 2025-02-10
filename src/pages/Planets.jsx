@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./planets.module.css";
+import styles from "./Planets.module.css";
 
 function Planets() {
   const [planets, setPlanets] = useState([]);
