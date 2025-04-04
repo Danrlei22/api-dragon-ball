@@ -12,9 +12,9 @@ Currently, two official plugins are available:
 
 Este projeto é uma aplicação web desenvolvida em React que permite aos usuários explorar informações sobre personagens e sagas do universo Dragon Ball. Utilizando a API de Dragon Ball, os usuários podem visualizar detalhes de cada personagem, como suas habilidades,KI base, KI total e afiliações.
 
-# Pode ser acessado pelo no link abaixo
+# Você pode acessar o aplicativo através do seguinte link:
 
-https://apidragonballz.netlify.app/
+[API Dragon Ball](https://apidragonballz.netlify.app/)
 
 ## Objetivo
 
